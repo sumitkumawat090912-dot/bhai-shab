@@ -1,64 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dental Clinic Premium</title>
-<style>
-body{font-family:Arial;margin:0;background:#f4f7fb}
-header{background:#0a66c2;color:white;padding:15px;text-align:center}
-nav{display:flex;justify-content:center;gap:20px;background:#083d77;padding:10px}
-nav a{color:white;text-decoration:none}
-.hero{padding:60px;text-align:center;background:#e3f2fd}
-.btn{background:#0a66c2;color:white;padding:10px 20px;border:none;border-radius:5px}
-.section{padding:40px;text-align:center}
-.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.card{background:white;padding:20px;border-radius:10px;width:250px;box-shadow:0 0 10px rgba(0,0,0,0.1)}
-form{display:flex;flex-direction:column;gap:10px;width:300px;margin:auto}
-input,textarea{padding:10px}
-footer{background:#083d77;color:white;text-align:center;padding:10px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Manoj Dental Hospital | Implant Centre - Jhunjhunu</title>
+  <!-- Google Fonts + Tailwind + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    body { background: #fefcf5; }
+    .glass-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(2px); }
+    .gold-gradient { background: linear-gradient(135deg, #C9A03D 0%, #E4BC5C 50%, #C9A03D 100%); }
+    .shadow-premium { box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.02); }
+    .hover-scale { transition: all 0.3s cubic-bezier(0.2, 0.95, 0.4, 1.05); }
+    .hover-scale:hover { transform: translateY(-6px) scale(1.02); }
+    .testimonial-quote::before { content: "“"; font-size: 5rem; position: absolute; left: -1rem; top: -1.8rem; color: #E4BC5C; font-family: serif; opacity: 0.5; }
+    .btn-gold { background: linear-gradient(95deg, #B8860B, #DAA520); transition: all 0.2s; }
+    .btn-gold:hover { background: linear-gradient(95deg, #9B6E0C, #C49114); transform: scale(1.02); box-shadow: 0 12px 22px -10px rgba(201,160,61,0.5); }
+    .border-gold-light { border-color: rgba(201,160,61,0.35); }
+    .clinic-img-grid img { transition: transform 0.4s ease; cursor: pointer; }
+    .clinic-img-grid img:hover { transform: scale(1.02); }
+  </style>
 </head>
-<body>
-<header>
-<h1>Manoj Dental Clinic</h1>
-<p>Advanced Dental Care</p>
-</header>
-<nav>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#booking">Booking</a>
-<a href="#contact">Contact</a>
-</nav>
-<section class="hero">
-<h2>Healthy Smile Starts Here</h2>
-<button class="btn">Book Appointment</button>
-</section>
-<section id="services" class="section">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card">Teeth Cleaning</div>
-<div class="card">Root Canal</div>
-<div class="card">Implants</div>
-</div>
-</section>
-<section id="booking" class="section">
-<h2>Book Appointment</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="date" required>
-<textarea placeholder="Message"></textarea>
-<button class="btn">Submit</button>
-</form>
-</section>
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-<p>Phone: 09314344682</p>
-<p>Location: Rd Number 1</p>
-</section>
-<footer>
-<p>© 2026 Dental Clinic</p>
-</footer>
+<body class="antialiased">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 transition-all">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-3 flex flex-wrap justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-tooth text-white text-xl"></i>
+        </div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-800">Manoj Dental <span class="text-amber-700">Hospital</span></h1>
+          <p class="text-[11px] md:text-xs font-medium text-gray-500">And Implant Centre</p>
+          <p class="text-[10px] text-gray-400 hidden md:block">मनोज डेटल हॉस्पिटल एंड इंप्लांट सेंटर</p>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="#home" class="hover:text-amber-700 transition">Home</a>
+        <a href="#about" class="hover:text-amber-700 transition">About</a>
+        <a href="#services" class="hover:text-amber-700 transition">Services</a>
+        <a href="#gallery" class="hover:text-amber-700 transition">Gallery</a>
+        <a href="#testimonials" class="hover:text-amber-700 transition">Testimonials</a>
+        <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tel:09314344682" class="hidden sm:flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full text-amber-800 font-semibold text-sm border border-amber-200 transition hover:bg-amber-100">
+          <i class="fas fa-phone-alt text-amber-600"></i> <span>093143 44682</span>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu drawer -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 -translate-x-full md:hidden shadow-2xl">
+      <div class="flex justify-between p-5 border-b">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-tooth text-amber-600 text-2xl"></i>
+          <span class="font-bold text-xl">Manoj Dental</span>
+        </div>
+        <button id="close-menu" class="text-2xl">&times;</button>
+      </div>
+      <div class="flex flex-col space-y-6 p-8 text-xl font-medium">
+        <a href="#home" class="hover:text-amber-700 border-b pb-2">Home</a>
+        <a href="#about" class="hover:text-amber-700 border-b pb-2">About Us</a>
+        <a href="#services" class="hover:text-amber-700 border-b pb-2">Treatments</a>
+        <a href="#gallery" class="hover:text-amber-700 border-b pb-2">Gallery</a>
+        <a href="#testimonials" class="hover:text-amber-700 border-b pb-2">Stories</a>
+        <a href="#contact" class="hover:text-amber-700">Book Now</a>
+        <div class="pt-4"><a href="tel:09314344682" class="btn-gold text-center block text-white py-3 rounded-xl"><i class="fas fa-phone-alt mr-2"></i>Call Clinic</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 md:pt-28">
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-br from-white via-amber-50/30 to-white">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-16 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="flex items-center space-x-1 bg-white/70 w-fit px-3 py-1.5 rounded-full shadow-sm border border-amber-100 mb-5">
+            <div class="flex text-yellow-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <span class="text-gray-700 text-sm font-medium ml-2">5.0 ★★★★★ (169+ reviews)</span>
+          </div>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-800">Where <span class="text-amber-700">Smiles</span> Become <br>Masterpieces</h1>
+          <p class="text-gray-600 text-lg mt-6 max-w-lg">Advanced dental implants, cosmetic dentistry, and complete oral care — trusted by 1000+ families in Jhunjhunu. Experience pain-free, modern dentistry.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href="#contact" class="btn-gold text-white font-bold px-8 py-3 rounded-full shadow-lg transition-all inline-flex items-center gap-2"><i class="fas fa-calendar-check"></i> Book Premium Visit</a>
+            <a href="#services" class="border-2 border-amber-300 text-amber-800 font-semibold px-8 py-3 rounded-full hover:bg-amber-50 transition">Explore Services <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+          <div class="mt-8 flex flex-col gap-2 text-sm text-gray-500">
+            <span><i class="fas fa-map-marker-alt text-amber-600"></i> Rd Number 1, opp. b.d.k. hospital, Kajiwada Mohalla, Jhunjhunu, Rajasthan 333001</span>
+            <span><i class="far fa-clock"></i> Open today · Closes 6:30 pm</span>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+            <img src="https://placehold.co/600x500/f8f2e5/c9a03d?text=Manoj+Dental+Clinic+%7C+Modern+Care" alt="Manoj Dental Hospital Clinic" class="w-full h-auto object-cover">
+            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur p-3 rounded-xl shadow-md max-w-[220px] border-l-4 border-amber-500">
+              <i class="fas fa-quote-left text-amber-500 text-sm"></i>
+              <p class="text-xs font-medium italic">"My new teeth look and feel amazing"</p>
+              <p class="text-[11px] font-bold mt-1">— Kamal Soni, Age 52 Yrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION with address & hindi name -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-amber-600 font-semibold tracking-wide uppercase text-sm">Legacy of excellence</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">Manoj Dental Hospital <br> & Implant Centre</h2>
+          <p class="text-amber-700 text-lg font-hindi mt-1">मनोज डेटल हॉस्पिटल एंड इंप्लांट सेंटर</p>
+          <div class="w-24 h-1 gold-gradient mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 space-y-5">
+            <p class="text-gray-700 text-lg">Located at <strong class="text-amber-800">Rd Number 1, opposite B.D.K. Hospital, Kajiwada Mohalla, Jhunjhunu, Rajasthan 333001</strong>, our centre is equipped with world-class technology, CBCT scans, laser dentistry, and a dedicated implant O.T. We blend precision with compassion.</p>
+            <div class="flex items-center gap-4 bg-amber-50 p-4 rounded-2xl">
+              <i class="fas fa-trophy text-3xl text-amber-600"></i>
+              <div><strong class="text-gray-800">5.0 ★★★★★ (169 Google reviews)</strong><p class="text-sm text-gray-600">Rated #1 dental clinic in Jhunjhunu region for implants & cosmetic smiles.</p></div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-3">
+              <div class="flex items-center gap-2"><i class="fas fa-microscope text-amber-600"></i><span>CBCT Imaging</span></div>
+              <div class="flex items-center gap-2"><i class="fas fa-laptop-medical text-amber-600"></i><span>Laser Dentistry</span></div>
+              <div class="flex items-center gap-2"><i class="fas fa-teeth-open text-amber-600"></i><span>Smile Makeover</span></div>
+              <div class="flex items-center gap-2"><i class="fas fa-clock text-amber-600"></i><span>Emergency Care</span></div>
+            </div>
+            <div class="mt-3 p-3 bg-gray-50 rounded-xl border-l-4 border-amber-400">
+              <p class="text-sm"><i class="fas fa-map-pin text-amber-600 mr-2"></i><strong>Full Address:</strong> Rd Number 1, opp. b.d.k. hospital, Kajiwada Mohalla, Jhunjhunu, Rajasthan 333001</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2 bg-amber-50 rounded-3xl p-2 shadow-premium">
+            <img src="https://placehold.co/550x450/fef3e2/c9a03d?text=Premium+Clinic+Interior+%7C+Advanced+OT" alt="clinic interior manoj dental" class="rounded-2xl w-full shadow-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES CARDS -->
+    <section id="services" class="py-16 bg-gradient-to-b from-white to-amber-50/30">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Premium Dental <span class="text-amber-700">Services</span></h2>
+          <p class="text-gray-500 mt-3">Advanced technology, personalized care — full range under one roof</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-microchip text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Dental Implants</h3>
+            <p class="text-gray-600 mt-2">Painless titanium & ceramic implants, same-day solutions, full mouth rehabilitation with long-term warranty.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-smile text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Smile Designing</h3>
+            <p class="text-gray-600 mt-2">Veneers, laminates, teeth whitening, and Hollywood smile makeovers by expert cosmetic dentists.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-tooth text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Root Canal (RCT)</h3>
+            <p class="text-gray-600 mt-2">Painless rotary endodontics with single-visit options using microscopes for precision.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-braces text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Orthodontics</h3>
+            <p class="text-gray-600 mt-2">Metal braces, ceramic braces, and invisible aligners for all age groups — perfect alignment.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-gem text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Crowns & Bridges</h3>
+            <p class="text-gray-600 mt-2">Zirconia, E-max, and metal-free restorations that mimic natural teeth aesthetics.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-premium border border-gray-100 hover-scale transition-all">
+            <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-child text-white text-2xl"></i></div>
+            <h3 class="text-xl font-bold">Kids Dentistry</h3>
+            <p class="text-gray-600 mt-2">Gentle pediatric care, laser fillings, and fun environment to build healthy habits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION - Clinic Photos -->
+    <section id="gallery" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-12">
+          <span class="bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold">Our Premium Space</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-3">Clinic <span class="text-amber-700">Gallery</span></h2>
+          <p class="text-gray-500 mt-2">State-of-the-art facility, modern interiors & advanced dental setup</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 clinic-img-grid">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Modern+Reception+Area" alt="Clinic Reception" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Elegant Reception & Lounge</p></div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Advanced+Implant+OT" alt="Implant Operation Theatre" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Advanced Implant O.T.</p></div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Digital+CBCT+Scan" alt="Digital CBCT" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Digital CBCT & 3D Imaging</p></div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Painless+Laser+Chamber" alt="Laser Dentistry" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Laser Dentistry Suite</p></div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Smile+Makeover+Studio" alt="Smile Studio" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Smile Design Studio</p></div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="https://placehold.co/500x400/f5ede0/b8860b?text=Comfortable+Patient+Chair" alt="Patient Room" class="w-full h-64 object-cover">
+            <div class="p-3 bg-white"><p class="font-medium text-center">Ergonomic Dental Chairs</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS section with Kamal Soni -->
+    <section id="testimonials" class="py-16 bg-amber-50/30">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-12">
+          <span class="bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold">Patient Love</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-3">Real smiles, <span class="text-amber-700">real stories</span></h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-amber-50 to-white p-6 md:p-8 rounded-3xl shadow-premium border border-amber-100 relative">
+            <div class="testimonial-quote relative">
+              <i class="fas fa-star text-yellow-500 mb-3 text-xl"></i><i class="fas fa-star text-yellow-500 text-xl"></i><i class="fas fa-star text-yellow-500 text-xl"></i><i class="fas fa-star text-yellow-500 text-xl"></i><i class="fas fa-star text-yellow-500 text-xl"></i>
+              <p class="text-gray-800 text-lg md:text-xl font-medium mt-3 leading-relaxed">"My new teeth look and feel amazing. The implant procedure was painless, and the team guided me with such warmth. I can finally eat and smile confidently!"</p>
+              <div class="flex items-center gap-4 mt-6">
+                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-white font-bold">KS</div>
+                <div><p class="font-extrabold text-gray-800">Kamal Soni</p><p class="text-sm text-gray-500">Age 52 Yrs · Full Mouth Implants</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm">
+              <i class="fas fa-quote-right text-3xl text-amber-400"></i>
+              <div><p class="font-semibold">"World-class implant centre! I was afraid of dental treatment, but the doctors made it so smooth. Highly recommend Manoj Dental."</p><p class="text-sm text-gray-500 mt-2">— Ritu Singh, Google review</p></div>
+            </div>
+            <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm">
+              <i class="fas fa-quote-right text-3xl text-amber-400"></i>
+              <div><p class="font-semibold">"Got my smile makeover done. The results are beyond expectations. Very professional staff and state-of-the-art clinic."</p><p class="text-sm text-gray-500 mt-2">— Ankit Sharma, Verified patient</p></div>
+            </div>
+            <div class="flex items-center gap-3 bg-amber-50 p-4 rounded-xl">
+              <i class="fab fa-google text-2xl text-amber-600"></i>
+              <span><strong class="text-gray-800">169+ reviews · 5.0 ★★★★★</strong> <span class="text-gray-600 text-sm">"Exceptional care & advanced implants"</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + MAP with exact Jhunjhunu address -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div class="bg-amber-50/40 rounded-3xl shadow-xl p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-gray-800">Schedule Your <span class="text-amber-700">Premium Visit</span></h3>
+            <p class="text-gray-500 mt-1">Fill details and our care coordinator will call you.</p>
+            <form id="appointmentForm" class="mt-6 space-y-5">
+              <div><input type="text" placeholder="Full Name" class="w-full border border-gray-200 rounded-xl p-3 focus:ring-2 focus:ring-amber-300 outline-none bg-white" required></div>
+              <div><input type="tel" placeholder="Phone Number" class="w-full border border-gray-200 rounded-xl p-3 focus:ring-2 focus:ring-amber-300 outline-none bg-white" required></div>
+              <div><input type="email" placeholder="Email Address" class="w-full border border-gray-200 rounded-xl p-3 focus:ring-2 focus:ring-amber-300 outline-none bg-white"></div>
+              <div><select class="w-full border border-gray-200 rounded-xl p-3 focus:ring-2 focus:ring-amber-300 bg-white"><option>Dental Implant Consultation</option><option>Smile Design</option><option>Root Canal Treatment</option><option>General Checkup</option></select></div>
+              <button type="submit" class="btn-gold w-full text-white font-bold py-3 rounded-xl transition-all shadow-md"><i class="far fa-calendar-alt mr-2"></i>Request Appointment</button>
+              <p class="text-center text-xs text-gray-400 mt-2">We respect your privacy. No spam.</p>
+            </form>
+            <div id="formMessage" class="mt-3 text-center text-green-700 text-sm font-medium hidden"></div>
+          </div>
+          <div class="space-y-6">
+            <div class="bg-gray-50 p-6 rounded-2xl shadow-premium border border-gray-100">
+              <h4 class="text-xl font-bold flex items-center gap-2"><i class="fas fa-map-marker-alt text-amber-600"></i>Visit our centre</h4>
+              <p class="text-gray-800 mt-2 font-medium">Rd Number 1, opp. b.d.k. hospital, Kajiwada Mohalla, Jhunjhunu, Rajasthan 333001</p>
+              <p class="text-gray-600 text-sm mt-1">📍 Landmark: Opposite B.D.K. Hospital, Main Road</p>
+              <div class="mt-4 flex flex-col gap-2">
+                <a href="tel:09314344682" class="flex items-center gap-3 text-amber-800 font-semibold"><i class="fas fa-phone-alt"></i> 093143 44682</a>
+                <div class="flex items-center gap-3 text-gray-600"><i class="far fa-clock"></i> Mon - Sat: 9:30 AM – 6:30 PM | Sunday: By appointment</div>
+              </div>
+              <div class="mt-5 h-56 bg-white rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <!-- Google Maps Embed with exact Jhunjhunu location -->
+                <iframe class="w-full h-full" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" 
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Rd+Number+1+opposite+b.d.k.+hospital+Kajiwada+Mohalla+Jhunjhunu+Rajasthan+333001&zoom=16">
+                </iframe>
+              </div>
+              <p class="text-xs text-gray-400 mt-2 text-center">📍 Exact location: Rd Number 1, opp. BDK Hospital, Jhunjhunu</p>
+            </div>
+            <div class="bg-gradient-to-r from-amber-50 to-white p-5 rounded-2xl flex items-center gap-3 border-l-8 border-amber-500 shadow-sm">
+              <i class="fas fa-award text-3xl text-amber-600"></i>
+              <div><p class="font-bold">Trusted since 2005</p><p class="text-sm">3000+ successful implants | Advanced laser centre | Jhunjhunu's finest</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER with complete address -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2"><i class="fas fa-tooth text-amber-400 text-xl"></i><span class="font-bold text-white text-lg">Manoj Dental Hospital</span></div>
+          <p class="text-sm mt-3">मनोज डेटल हॉस्पिटल एंड इंप्लांट सेंटर</p>
+          <p class="text-xs text-gray-400 mt-2">Advanced implant centre & cosmetic dentistry. Precision meets compassion.</p>
+        </div>
+        <div><h5 class="font-bold text-white">Quick Links</h5><ul class="mt-3 space-y-2 text-sm"><li><a href="#home" class="hover:text-amber-300">Home</a></li><li><a href="#services" class="hover:text-amber-300">Treatments</a></li><li><a href="#gallery" class="hover:text-amber-300">Gallery</a></li><li><a href="#testimonials" class="hover:text-amber-300">Reviews</a></li></ul></div>
+        <div><h5 class="font-bold text-white">Contact</h5><ul class="mt-3 space-y-2 text-sm"><li><i class="fas fa-phone-alt mr-2"></i>093143 44682</li><li><i class="fas fa-envelope mr-2"></i>care@manojdental.com</li><li class="break-words"><i class="fas fa-location-dot mr-2"></i>Rd Number 1, opp. BDK Hospital, Kajiwada Mohalla, Jhunjhunu, RJ 333001</li></ul></div>
+        <div><h5 class="font-bold text-white">Hours</h5><ul class="mt-3 space-y-2 text-sm"><li>Open today till 6:30 pm</li><li>Emergency: +91 93143 44682</li><li class="flex gap-3 mt-2 text-amber-400"><i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-whatsapp"></i></li></ul></div>
+      </div>
+      <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500">© 2025 Manoj Dental Hospital And Implant Centre — Jhunjhunu | Premium Dental Care. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    if(menuBtn && mobileMenu && closeMenuBtn){
+      menuBtn.addEventListener('click', () => mobileMenu.classList.remove('-translate-x-full'));
+      closeMenuBtn.addEventListener('click', () => mobileMenu.classList.add('-translate-x-full'));
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('-translate-x-full'));
+      });
+    }
+    // form submission
+    const form = document.getElementById('appointmentForm');
+    const msgDiv = document.getElementById('formMessage');
+    if(form){
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = form.querySelector('input[placeholder="Full Name"]').value.trim();
+        if(name === "") {
+          alert("Please enter your name");
+          return;
+        }
+        msgDiv.classList.remove('hidden');
+        msgDiv.innerHTML = "✓ Thank you! Our team will contact you shortly to confirm your premium consultation at Manoj Dental, Jhunjhunu.";
+        msgDiv.classList.add('text-green-700', 'bg-green-100', 'p-2', 'rounded-lg');
+        form.reset();
+        setTimeout(() => { msgDiv.classList.add('hidden'); msgDiv.innerHTML = ""; }, 5000);
+      });
+    }
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        const targetId = this.getAttribute('href');
+        if(targetId === "#" || targetId === "") return;
+        const target = document.querySelector(targetId);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
